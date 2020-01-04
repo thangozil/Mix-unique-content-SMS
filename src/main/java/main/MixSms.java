@@ -54,6 +54,9 @@ public class MixSms {
 					writer.write(current_result.toString() + System.lineSeparator());
 				}
 				System.out.println(String.format("Finish content: %s", changesList.size()));
+				
+				// File to large
+				break;
 			}
 			writer.close();
 		} catch (Exception e) {

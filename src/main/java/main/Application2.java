@@ -70,7 +70,7 @@ public class Application2 {
 		
 		System.out.println(originalSMS.size());
 		
-		//new MixSms(originalSMS).GetUniqueSMS();
+		new MixSms(originalSMS).GetUniqueSMS();
 		
 	}
 
