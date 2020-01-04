@@ -1,5 +1,6 @@
 package main;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -67,10 +68,20 @@ public class Application2 {
 			String sms = String.join(" ", originalList);
 			originalSMS.add(sms);
 		}
-		
+				
 		System.out.println(originalSMS.size());
 		
-		new MixSms(originalSMS).GetUniqueSMS();
+		try {
+			FileWriter writer = new FileWriter("output.txt");
+			for(String sms: originalSMS.subList(0, 50000)) {
+				writer.write(sms + System.lineSeparator());
+			}
+		}
+		catch (Exception e) {
+			
+		}
+		
+		//new MixSms(originalSMS).GetUniqueSMS();
 		
 	}
 
